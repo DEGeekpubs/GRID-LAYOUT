@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html>
+  <title>Main</title>
+  <link rel="stylesheet" href="w3.css">
+  <head>
+  <script>
+
+function onclick()
+{
+  var firstname =  document.getElementById('firstname').nodeValue;
+  var lastname  =  document.getElementById('lastname').nodeValue;
+  var address   =  document.getElementById('address').nodeValue;
+  var emailaddress  = document.getElementById('emailaddress').nodeValue;
+  var contactnumber = document.getElementById('contactnumber').nodeValue;
+  var timearrival  = document.getElementById('timearrival').nodeValue;
+  var timedeparture = document.getElementById('timedeparture').nodeValue;
+  var date  = document.getElementById('date').nodeValue;
+
+
+  alert('pressed !');
+}
+
+function reset()
+{
+ var  firstname = "";
+ var  lastname = "";
+ var  emailaddress = "";
+ var  address = "";
+ var  contactnumber = "";
+ var  timearrival = "";
+ var  timedeparture = "";
+ var  date ="";
+
+}
+
+function onclick_firstname(){
+  let firstName = document.getElementsById("firstname").nodeValue="";
+}
+
+
+</script>
+<style>
+
+.content {display:none;}
+.preload { width:100px;
+    height: 100px;
+    position: fixed;
+    top: 50%;
+    left: 50%;}
+
+
+
+
+
+@-webkit-keyframes flashing {
+    0% {background-color: white;}    
+    50% {background-color: rgb(215, 222, 243);} 
+    100% {background-color: rgb(248, 248, 248);}
+}
+@keyframes flashing {
+  0% {background-color: white;}    
+    50% {background-color: rgb(218, 226, 248);} 
+    100% {background-color: rgb(252, 252, 252);}
+ }
+.flashing {
+ 
+  -webkit-animation: flashing 3000ms linear infinite;
+  animation: flashing 3000ms linear infinite;
+}
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #3204fd;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 280px) {
+  .text {font-size: 11px}
+}
+
+
+.tableclassmain{
+    background-color: white;
+    background: white;
+      color: black;
+      text-align: none;
+      border: 2px;
+      border-color: black;
+      border-style: solid;
+      height:400px;
+      width:440px;
+      align-content: center;
+      align-items: baseline;
+      font-family: Verdana;
+}
+.tableclass {
+      background-color: rgb(255, 255, 255);
+      color: black;
+      text-align: left;
+      border: 2px;
+      border-color: black;
+      border-style: solid;
+      height:150px; 
+      font-family: verdana;
+    
+     }
+
+
+
+
+
+.superclasssubscrberform:active
+{
+  background: rgb(3, 75, 231);
+  font-family: 20px;
+  font-weight: bold;
+  color:rgb(255, 255, 255);
+  min-width:200px;
+  border:none;
+  border-color: none;
+  box-shadow: 1px 1px 1px 1px lightgray ;
+  transition: all 1.3s ease-in-out;
+  color: black;
+}
+
+
+.superclasssubscrberform:hover 
+{
+  background: rgb(3, 75, 231);
+  font-family: 20px;
+  font-weight: bold;
+  color:rgb(255, 255, 255);
+  min-width:200px;
+  border:none;
+  border-color: none;
+  box-shadow: 1px 1px 1px 1px darkblue ;
+  transition: all 1.3s ease-in-out;
+  
+}
+
+
+ 
+.tdclassheader {
+    background-color: blue;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    font-weight: lighter;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    font-family: sans-serif;
+      font-size: 15px;
+      
+      height:15px;
+      width:40px;
+      align-self: center;
+      align-items: center;
+    
+      
+      
+}
+.tdclass {
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-family: Verdana;
+    font-size: 40px;
+    font-weight: lighter;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    font-family: sans-serif;
+      font-size: 15px;
+      color: black;
+      height:15px;
+      width:40px;
+      align-self: center;
+      align-items: center;
+     background-color: white;
+      
+      
+}
+
+
+.trclassform {
+    border-style: solid;
+    border-color: grey;
+    border-width: 4px;
+    align-content: top;
+    vertical-align: top;
+    
+  width: 40px;
+  height: 10px;
+  font-family: 'Segoe UI';
+  font-size: 20px;
+  color: black;
+
+}
+
+.trclass {
+    border-style: solid;
+    border-color: grey;
+    border-width: 1px;
+    background: padding-box;
+    background-color: blue;
+  
+
+}
+
+.h1class:active {
+  font-family: sans-serif;
+    
+}
+
+.h1class:hover {
+ font-family: sans-serif;
+ 
+}
+
+
+.fieldnameclass:active {
+  font-family: sans-serif;
+  background-color: aliceblue;
+  box-shadow: 1px 2px 2px 1px lightblue;
+  transition: all 0.3s ease;
+}
+
+.fieldnameclass:hover{
+  font-family: sans-serif;
+  font-size:14px;
+  background-color: lightblue;
+  background-color: aliceblue;
+  box-shadow: 1px 2px 2px 1px lightblue;
+  transition: all 0.3s ease;
+}
+
+
+.submitclass:active {
+  font-family: sans-serif;
+  background-color: aliceblue;
+  box-shadow: 1px 2px 2px 1px blue;
+  transition: all 0.2s ease;
+
+}
+
+.submitclass:hover {
+  font-family: sans-serif;
+  background-color: aliceblue;
+  box-shadow: 1px 12px 12px 1px grey;
+  transition: all 0.2s ease;
+}
+
+
+.resetclass:active{
+  font-family: sans-serif;
+  background-color: aliceblue;
+  box-shadow: 1px 12px 12px 1px blue;
+  transition: all 0.2s ease;
+}
+.resetclass:hover{
+  font-family: sans-serif;
+  background-color: aliceblue;
+  box-shadow: 1px 12px 12px 1px grey;
+  transition: all 0.2s ease;
+}
+
+
+
+.menubuttonclass {
+  font-family: sans-serif;
+  border:1px;
+  border-style:solid;
+  border-width: 1px;
+  border-color: white;
+  background-color: rgba(5, 61, 214, 0.938);
+  box-shadow: 1px 12px 12px 1px blue;
+  transition: all 0.2s ease;
+  color:white;
+
+}
+
+.menubuttonclass:hover {
+  font-family: sans-serif;
+  background-color: rgb(36, 14, 231);
+  box-shadow: 2px 15px 15px 2px rgb(123, 118, 199);
+  transition: all 0.2s ease;
+  color:white;
+}
+
+.menubottomclass {
+  font-family: sans-serif;
+  border:1px;
+  border-style:solid;
+  font-size: 12px;
+  font-family: sans-serif;
+  border-width: 2px;
+  border-color: white;
+  background-color: rgb(0, 67, 250);
+  box-shadow: 1px 2px 22px 1px rgb(212, 212, 245);
+  transition: all 0.7s ease-in-out;
+  color:rgb(12, 12, 12);
+  font-family: sans-serif;
+  border:1px;
+  border-style:solid;
+  border-width: 1px;
+  border-color: white;
+  background-color: rgb(226, 232, 248);
+  box-shadow: 1px 12px 12px 1px rgb(222, 222, 250);
+  transition: all 0.2s ease;
+  color:white;
+
+
+}
+
+.menubottomclass:hover {
+  font-family: sans-serif;
+  border:1px;
+  font-size: 12px;
+  border-style:solid;
+  border-width: 2px;
+  border-color: white;
+  background: rgb(0, 48, 179);
+  background-color: rgb(0, 48, 179);
+  box-shadow: 2px 2px 2px 2px rgb(196, 192, 248);
+  transition: all 0.7s ease-in-out;
+  font-family: sans-serif;
+  background-color: rgb(208, 203, 255);
+  box-shadow: 2px 15px 15px 2px rgb(123, 118, 199);
+  transition: all 0.2s ease;
+  color:white;
+
+ }
+
+
+
+.anchorclass{
+  text-decoration: none; color:white;
+}
+
+
+.navbar {
+  overflow: hidden;
+  background-color: #fdf5f5;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: rgb(5, 5, 5);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: rgb(5, 5, 5);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #0331ff;
+  color:white;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: rgb(0, 0, 0);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #0331ff;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+
+<body>
+
+  <div class="preload"><img src="https://i.imgur.com/KUJoe.gif">
+  </div>
+  <div class="content">
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#" style="font-family: sans-serif;font-size: 18px; color:white;">Home</a>
+    <a href="#" style="font-family: sans-serif;font-size: 18px; color:white;">About</a>
+    <a href="#" style="font-family: sans-serif;font-size: 18px; color:white;">Order Services Online</a>
+    <a href="#" style="font-family: sans-serif;font-size: 18px; color:white;">Customer Portal Online</a>
+    <a href="#" style="font-family: sans-serif;font-size: 18px; color:white;">Customer Feed Back</a>
+    <a href="#" style="font-family: sans-serif;font-size: 18px; color:white;">Contact HQ</a>
+    
+
+  </div>
+  
+  <div id="main">
+     
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+  
+    <table class ="tableclassmain" height="1670px" width="1300px">
+        <tr>
+            <td>
+        <!---->
+
+        <div class="navbar" style="background-color: white;">
+            <a href="#home">TransElectric-Home</a>
+            <div class="dropdown">
+              <button class="dropbtn">Electric-Services
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#">Digital Mobile Meters</a>
+                <a href="#">DIgital Electric Rechargers</a>
+                <a href="#">Builtin Digital Electric Invertors</a>
+                <a href="#">Mobile Grid Adapters</a>
+                <a href="#">Electric Burners</a>
+                <a href="#">Electric Coolers</a>
+                <a href="#">Grid Solar Panel Services</a>
+
+                
+              </div>
+            </div> 
+            <div class="dropdown">
+              <button class="dropbtn">Electric-Consumers
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#">Residential Consumers</a>
+                <a href="#">Commercial Consumers</a>
+                <a href="#">High Level Consumers</a>
+                <a href="#">Medium Level Consumers</a>
+                <a href="#">Low Level Consumers</a>
+                <a href="#">Third Party Consumers</a>
+                <a href="#">Re-Supplier Consumers</a>
+              </div>
+            </div> 
+            <div class="dropdown">
+                <button class="dropbtn">Electric-Network
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">North Western States</a>
+                  <a href="#">North States</a>
+                  <a href="#">Mid Western States</a>
+                  <a href="#">Southern States</a>
+                  <a href="#">Eastern States</a>
+                  <a href="#">South Eastern States</a>
+                </div>
+              </div> 
+
+              <div class="dropdown">
+                <button class="dropbtn">Electric-Packages
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Residential Saver Package</a>
+                  <a href="#">Super Residential Package</a>
+                  <a href="#">Commercial Saver Package</a>
+                  <a href="#">Super Commercial Package</a>
+                  <a href="#">Low Level Saver Package</a>
+                  <a href="#">High Level Saver Package</a>
+                </div>
+              </div> 
+
+              <div class="dropdown">
+                <button class="dropbtn">Electric-Charges
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Residential Users</a>
+                  <a href="#">Commercial Users</a>
+                  <a href="#">Low Level Users</a>
+                  <a href="#">High Level Users</a>
+                  <a href="#">Third Party Users</a>
+                  <a href="#">Re-Supplier Users</a>
+                </div>
+              </div> 
+              <a href="#news">Contactus</a>
+          </div>
+            <!---->
+  <div id="container"  style="align-self:center ;align-content: flex-start ; align-items:center;max-width:1220px;border-radius: 2px; min-height:72px;border-width:2px;border-style:solid;border-color: black;background: rgb(255, 255, 255);">       
+    <div  class="menubottomclass"  style = "border:2px;border-radius: 1px;border-color:black;border-width: 1px ;border-style: solid; text-align: justify;margin-left: 5px;margin-top: 3px; text-indent: 2px;color: black;">
+      <div class="w3-container w3-center w3-animate-right" style="font-family: sans-serif;font-size: 25px;background-color: white;height: 40px;">
+        Trans-ElectricGrid : The No.1 Eletric Grid provider accross the entire country.
+            </div>
+
+
+        <div class="flashing">
+         <img  href="https://energyeducation.ca/encyclopedia/Electrical_grid" class="menubottomclass" src="GRID 4.gif" width="1200px" height="390px"  style = "border:1px;border-radius: 2px;border-color:black;border-width: 1px ;border-style: solid;">
+         </div>
+         <div class="w3-container w3-center w3-animate-right" style="font-family: sans-serif;font-size: 25px;background-color: white;height: 40px; color:black;">
+            Trans-ElectricGrid : The No.1 Eletric Grid provider accross the entire country.
+                </div>
+
+        </div>
+     </div>
+    </div>
+  
+<h1 class ="h1class" style  = "font-size: 30px;font-family: sans-serif; color:rgb(0, 0, 0); text-align: center;">
+  TransElectric Company - Home  </h1>  
+<table class ="tableclassmain" height="1670px" width="450px">
+<tr><td>  
+  <td>
+    <a href="" style="text-decoration: none; color:black;"> 
+    <div  class="menubottomclass"  style = "border:2px;border-radius: 1px;border-color:black;border-width: 1px ;border-style: solid; text-align: justify;margin-left: 2px;margin-top: 3px; text-indent: 2px;color: black;">
+     <div class="flashing">
+      <img  href="https://energyeducation.ca/encyclopedia/Electrical_grid" class="menubottomclass" src="1.jfif" width="390px" height="400px"  style = "border:1px;border-radius: 2px;border-color:black;border-width: 1px ;border-style: solid;background-color: white;">
+      <br>The amount of electricity used in homes and businesses depends on the day, the time, and the weather. For the most part, electricity must be generated at the time it is used. Electric utility companies and grid operators must work together to generate the right amount of electricity to meet demand. When demand increases, operators can respond by increasing production from power plants that are already operating, generating electricity from power plants that are already running at a low level or on standby, importing electricity from distant sources, or calling on end-users who agreed to consume less electricity from the grid.<br>
+    </div>
+    </div>
+
+    </a>
+  </td> 
+<td>
+  <a href="" style="text-decoration: none; color:black;"> 
+    <div  class="menubottomclass"  style = "border:2px;border-radius: 1px;border-color:black;border-width: 1px ;border-style: solid; text-align: justify;margin-left: 5px;margin-top: 3px; text-indent: 2px;color: black;background-color: white;">
+     <div class="flashing">
+      <img  href="https://energyeducation.ca/encyclopedia/Electrical_grid" class="menubottomclass" src="2.jfif" width="390px" height="400px"  style = "border:1px;border-radius: 2px;border-color:black;border-width: 1px ;border-style: solid;background-color: white;">
+      <br>The amount of electricity used in homes and businesses depends on the day, the time, and the weather. For the most part, electricity must be generated at the time it is used. Electric utility companies and grid operators must work together to generate the right amount of electricity to meet demand. When demand increases, operators can respond by increasing production from power plants that are already operating, generating electricity from power plants that are already running at a low level or on standby, importing electricity from distant sources, or calling on end-users who agreed to consume less electricity from the grid.<br>
+    </div>
+    </div>
+  
+    </a>
+</td> 
+<td>
+  <td>
+   <a href="" style="text-decoration: none; color:black;"> 
+      <div  class="menubottomclass"  style = "border:2px;border-radius: 1px;border-color:black;border-width: 1px ;border-style: solid; text-align: justify;margin-left: 5px;margin-top: 3px; text-indent: 2px;color: black;">
+       <div class="flashing">
+        <img  href="https://energyeducation.ca/encyclopedia/Electrical_grid" class="menubottomclass" src="3.jfif" width="390px" height="400px"  style = "border:1px;border-radius: 2px;border-color:black;border-width: 1px ;border-style: solid;background-color: white;">
+        <br>The amount of electricity used in homes and businesses depends on the day, the time, and the weather. For the most part, electricity must be generated at the time it is used. Electric utility companies and grid operators must work together to generate the right amount of electricity to meet demand. When demand increases, operators can respond by increasing production from power plants that are already operating, generating electricity from power plants that are already running at a low level or on standby, importing electricity from distant sources, or calling on end-users who agreed to consume less electricity from the grid.<br>
+      </div> 
+      </div>   
+      </a>
+  </td> 
+ 
+
+
+</tr>
+</table>
+<table class="tableclass" height="1100px" width="1100px">
+  <br>
+<tr class="trclass">
+  <div style="background:white; border-width: 1px; border-width:1px;border-color:black;border-radius:20px; border-style:solid; font-family: verdana; font-size: 20px;">
+<td style="background:white;">
+
+  <div class="flashing">
+  <br>
+  <div class="divcontainer" width="400px" height="300px" style="background-color: white;">
+
+  <div class="slideshow-container" style="background-color: white;">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 7</div>
+       <img src="2.jfif" style="width:100%;align-content: stretch;background-color: white;">
+      <div class="text">Electric Grid </div>
+      <br><br>
+      
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 7</div>
+      <img src="3.jfif" style="width:100%;align-content: stretch;">
+      <div class="text">Caption Two</div>
+      <br><br>
+      
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 7</div>
+      <img src="4.jfif" style="width:100%;align-content: stretch;">
+      <div class="text">Caption Three</div>
+      <br><br>
+      
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 7</div>
+      <img src="1.jfif" style="width:100%;align-content: stretch;background-color: white;">
+      <div class="text">Caption Four</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">5 / 7</div>
+      <img src="6.jfif" style="width:100%;align-content: stretch;background-color: white;">
+      <div class="text">Caption five</div>
+    </div>
+
+
+    <div class="mySlides fade">
+      <div class="numbertext">6 / 7</div>
+      <img src="7.jfif" style="width:100%;align-content: stretch;background-color: white;">>
+      <div class="text">Caption six</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">7 / 7</div>
+      <img src="8.jfif" style="width:100%;align-content: stretch;background-color: white;">
+      <div class="text">Caption seven</div>
+    </div>
+
+    </div>
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+  </div>  
+    
+</td>
+</tr>
+<tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+  <td>
+    <table class ="tableclassmain" height="1600px" width="500px">
+      <tr>
+
+      <h1 class="h1class" style  ="font-size: 30px;font-family: sans-serif; color:rgb(0, 0, 0); text-align: center;"> 
+        TRANS ELECTRIC - TOP PRODUCTS </h1></tr>
+      <tr>
+        <td>
+          <a href="" style="text-decoration: none; color:black;"> 
+            <div  class="menubottomclass"  style = "border:2px;border-radius: 1px;border-color:black;border-width: 1px ;border-style: solid; text-align: justify;margin-left: 5px;margin-top: 3px; text-indent: 2px;color: black;">
+             <div class="flashing">
+              <img  href="https://energyeducation.ca/encyclopedia/Electrical_grid" class="menubottomclass" src="6.jfif" width="390px" height="400px"  style = "border:1px;border-radius: 2px;border-color:black;border-width: 1px ;border-style: solid;background-color: white;">
+              <br>The amount of electricity used in homes and businesses depends on the day, the time, and the weather. For the most part, electricity must be generated at the time it is used. Electric utility companies and grid operators must work together to generate the right amount of electricity to meet demand. When demand increases, operators can respond by increasing production from power plants that are already operating, generating electricity from power plants that are already running at a low level or on standby, importing electricity from distant sources, or calling on end-users who agreed to consume less electricity from the grid.<br>
+            </div> 
+            </div>   
+            </a>       
+        </td> 
+      <td>
+        <a href="" style="text-decoration: none; color:black;"> 
+          <div  class="menubottomclass"  style = "border:2px;border-radius: 1px;border-color:black;border-width: 1px ;border-style: solid; text-align: justify;margin-left: 5px;margin-top: 3px; text-indent: 2px;color: black;">
+           <div class="flashing">
+            <img  href="https://energyeducation.ca/encyclopedia/Electrical_grid" class="menubottomclass" src="10.jfif" width="390px" height="400px"  style = "border:1px;border-radius: 2px;border-color:black;border-width: 1px ;border-style: solid;background-color: white;">
+            <br>The amount of electricity used in homes and businesses depends on the day, the time, and the weather. For the most part, electricity must be generated at the time it is used. Electric utility companies and grid operators must work together to generate the right amount of electricity to meet demand. When demand increases, operators can respond by increasing production from power plants that are already operating, generating electricity from power plants that are already running at a low level or on standby, importing electricity from distant sources, or calling on end-users who agreed to consume less electricity from the grid.<br>
+          </div> 
+          </div>   
+          </a>
+      <td>
+        <td>
+          <a href="" style="text-decoration: none; color:black;"> 
+            <div  class="menubottomclass"  style = "border:2px;border-radius: 1px;border-color:black;border-width: 1px ;border-style: solid; text-align: justify;margin-left: 5px;margin-top: 3px; text-indent: 2px;color: black;">
+             <div class="flashing">
+              <img  href="https://energyeducation.ca/encyclopedia/Electrical_grid" class="menubottomclass" src="2.jfif" width="390px" height="400px"  style = "border:1px;border-radius: 2px;border-color:black;border-width: 1px ;border-style: solid;background-color: white;">
+              <br>The amount of electricity used in homes and businesses depends on the day, the time, and the weather. For the most part, electricity must be generated at the time it is used. Electric utility companies and grid operators must work together to generate the right amount of electricity to meet demand. When demand increases, operators can respond by increasing production from power plants that are already operating, generating electricity from power plants that are already running at a low level or on standby, importing electricity from distant sources, or calling on end-users who agreed to consume less electricity from the grid.<br>
+            </div> 
+            </div>   
+            </a>
+        </td> 
+      </tr>
+      <tr>
+        <td>
+          <a href="" style="text-decoration: none; color:black;"> 
+            <div  class="menubottomclass"  style = "border:2px;border-radius: 1px;border-color:black;border-width: 1px ;border-style: solid; text-align: justify;margin-left: 5px;margin-top: 3px; text-indent: 2px;color: black;">
+             <div class="flashing">
+              <img  href="https://energyeducation.ca/encyclopedia/Electrical_grid" class="menubottomclass" src="12.jfif" width="390px" height="400px"  style = "border:1px;border-radius: 2px;border-color:black;border-width: 1px ;border-style: solid;background-color: white;">
+              <br>The amount of electricity used in homes and businesses depends on the day, the time, and the weather. For the most part, electricity must be generated at the time it is used. Electric utility companies and grid operators must work together to generate the right amount of electricity to meet demand. When demand increases, operators can respond by increasing production from power plants that are already operating, generating electricity from power plants that are already running at a low level or on standby, importing electricity from distant sources, or calling on end-users who agreed to consume less electricity from the grid.<br>
+            </div> 
+            </div>   
+            </a>
+        </td> 
+      <td>
+        <a href="" style="text-decoration: none; color:black;"> 
+          <div  class="menubottomclass"  style = "border:2px;border-radius: 1px;border-color:black;border-width: 1px ;border-style: solid; text-align: justify;margin-left: 5px;margin-top: 3px; text-indent: 2px;color: black;">
+           <div class="flashing">
+            <img  href="https://energyeducation.ca/encyclopedia/Electrical_grid" class="menubottomclass" src="8.jfif" width="390px" height="400px"  style = "border:1px;border-radius: 2px;border-color:black;border-width: 1px ;border-style: solid;">
+            <br>The amount of electricity used in homes and businesses depends on the day, the time, and the weather. For the most part, electricity must be generated at the time it is used. Electric utility companies and grid operators must work together to generate the right amount of electricity to meet demand. When demand increases, operators can respond by increasing production from power plants that are already operating, generating electricity from power plants that are already running at a low level or on standby, importing electricity from distant sources, or calling on end-users who agreed to consume less electricity from the grid.<br>
+          </div> 
+          </div>   
+          </a>
+      </td> 
+      <td>
+        <td>
+          <a href="" style="text-decoration: none; color:black;"> 
+            <div  class="menubottomclass"  style = "border:2px;border-radius: 1px;border-color:black;border-width: 1px ;border-style: solid; text-align: justify;margin-left: 5px;margin-top: 3px; text-indent: 2px;color: black;">
+             <div class="flashing">
+              <img  href="https://energyeducation.ca/encyclopedia/Electrical_grid" class="menubottomclass" src="11.jfif" width="390px" height="400px"  style = "border:1px;border-radius: 2px;border-color:black;border-width: 1px ;border-style: solid;background-color: white;">
+              <br>The amount of electricity used in homes and businesses depends on the day, the time, and the weather. For the most part, electricity must be generated at the time it is used. Electric utility companies and grid operators must work together to generate the right amount of electricity to meet demand. When demand increases, operators can respond by increasing production from power plants that are already operating, generating electricity from power plants that are already running at a low level or on standby, importing electricity from distant sources, or calling on end-users who agreed to consume less electricity from the grid.<br>
+            </div> 
+            </div>   
+            </a>
+        </td> 
+      </tr>
+      </table>
+
+  </td>
+</tr>
+<tr>
+  
+</tr>
+
+
+
+
+</tr>                  
+                          
+</table>
+  
+</form>
+
+<!---->
+<div class="navbar">
+  <div>
+    <a href="#news">Grid Services</a>
+    <a href="#home">Grid Privacy Policy</a>
+    <a href="#news">Grid Help Line</a>
+    <a href="#news">Grid Violation Terms</a>
+    <a href="#news">Grid Careers</a>
+    <a href="#home">Grid Discussion Forums</a>
+    <a href="#news">Grid Newsletter</a>
+  </div>
+  
+
+</table>
+</div>
+</div>
+</body>
+
+
+
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+  }
+</script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+  <script id="rendered-js" >
+$(function () {
+$(".preload").fadeOut(500, function () {
+$(".content").fadeIn(250);
+});
+});
+//# sourceURL=pen.js
+</script>
+
+</html>
